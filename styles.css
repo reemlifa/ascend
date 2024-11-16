@@ -7,36 +7,59 @@ html, body{
 body{
     background-image:url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
     background-size: 100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
 }
-.rocket_name{
+.left_side .mission_info{
+    border:1px solid green;
+    width:50%;
+    height:100%;
+    color:white;
+}
+.right_side{
+
+    width:50%;
+    height:100%;
+}
+.right_side .rocket_name{
     position:absolute;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:white;
     width:100%;
     height:90px;
     position:static;
 }
 
-.rocket_name input{
+.right_side .rocket_name input{
     width:50%;
     height:100%;
-    font-size:50px;
+    font-size:70px;
     background:transparent;
     border:none;
     color:white;
+    outline:none;
 }
-.rocket{
+.right_side .rocket_name ::placeholder {
+    color: rgba(255, 255, 255, 0.721);
+    opacity: 1; /* Firefox */
+}
+  
+.right_side ::-ms-input-placeholder { /* Edge 12 -18 */
+    color:rgba(255, 255, 255, 0.721);
+}
+
+.right_side .rocket{
     display:flex;
     justify-content: center;
     align-content:baseline;
 }
-.rocket #rocket_diagram{
+.right_side .rocket #rocket_diagram{
 
 }
 
-.rocket #left_arrow ,#right_arrow{
+.right_side .rocket #left_arrow ,#right_arrow{
+    align-self:center;
     height:50px;
-    border:1px solid blue;
 }
 .info{
     width:100%;
@@ -44,13 +67,20 @@ body{
     bottom:0;
     display:flex;
     justify-content:center;
-    -webkit-backdrop-filter: blur(1px);
+    /*-webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
-    background-image: blur(10px) rgba(228, 219, 202, 0.688);
+    background-image: blur(10px) rgba(228, 219, 202, 0.688);*/
+    padding:20px;
 }
 .info .rocket_information{
     position:static;
     font-size:13px;
     font-family:'Lucida Sans';
     color:white;
+    line-height:19px;
+    background:blur(10px);
+    background-color:rgba(255, 255, 255, 0.396);
+    border-radius:40px;
+    width:45%;
+    padding:20px;
 }
